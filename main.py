@@ -76,3 +76,55 @@ print("barcode 2 = ")
 print("th2")
 print('\n')
 
+array3 = []
+th3 = []
+array3 = np.sum(p, 0)
+
+print("Array Projection 3 = ")
+print(array3)
+print("\n")
+
+th3_p3 = sum(array3) / len(array3)
+
+print("Threshold value of P3 = ")
+print(th3_p3)
+print("\n")
+
+for z in range(len(array3)):
+    if th3_p3 >= array3[z]:
+        th3 = [*th3, 1]
+    else:
+        th3 = [*th3, 0]
+
+print("barcode 3 = ")
+print(th3)
+print("\n")
+
+array4 = []
+print("Array Projection 4 = ")
+print(array4)
+print("\n")
+
+th4 = []
+
+array0 = np.sum(p, 1)
+array45 = np.sum(p, 0)
+
+joinedarray2 = ((array0 + array45)/2)
+array4 = joinedarray2 + array45
+
+th4_p4 = sum(array4) / len(array4)
+
+print("Threshold value of P4 = ")
+print(th4_p4)
+print("\n")
+
+for w in range(len(array4)):
+    if th4_p4 >= array4[w]:
+        th4 = [*th4, 1]
+    else:
+        th4 = [*th4, 0]
+
+print("barcode 4 = ")
+print(th4)
+print("\n")
