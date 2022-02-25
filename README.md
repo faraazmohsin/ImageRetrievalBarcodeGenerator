@@ -9,3 +9,7 @@
 </p>
 
 ![alt text](https://github.com/faraazmohsin/ImageRetrievalBarcodeGenerator/blob/main/images/projectprojection.PNG)
+
+<p align="center" width="100%">
+  <img src="https://github.com/faraazmohsin/ImageRetrievalBarcodeGenerator/blob/main/images/projectprojection.PNG">
+</p>
