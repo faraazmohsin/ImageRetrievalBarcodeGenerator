@@ -11,3 +11,9 @@
 <p align="center" width="100%">
   <img src="https://github.com/faraazmohsin/ImageRetrievalBarcodeGenerator/blob/main/images/projectprojection.PNG">
 </p>
+
+## Measurements and Analysis
+
+<p align="center">
+  In terms of time complexity, calculating the number of operations in the entire code was required. Specifically, an algorithm is usually said to have a constant time when it is not dependent on the input data (n). This is because the input data is not dependent, and the size of the data does not usually matter, the running time will be equal each time too. In addition, because we do not have to specifically consider the input size, an algorithm with constant time is strong and efficient.
+ </p>
