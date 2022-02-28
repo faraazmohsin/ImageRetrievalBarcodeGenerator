@@ -169,7 +169,7 @@ print("\n")
 
 class data:
 
-    # calculate hamming distance
+    # Calculate hamming distance
     def h(self, u, y):
         hamming = 0
 
@@ -181,7 +181,7 @@ class data:
             else:
                 return
 
-    # define constructor for barcode
+    # Define constructor for barcode
     def __init__(self, start, barcode):
         self.fileLocationHam
         self.flocationHam
@@ -189,13 +189,13 @@ class data:
         self.start = start
         self.barcode = barcode
 
-    # calculate total accuracy
+    # Calculate total accuracy
     def acc(self, sort):
         fname = str(sort[0][1])
         compute = int(fname[24])
         counter = 0
 
-        # calculate accuracy from hamming distance
+        # Calculate accuracy from hamming distance
         for c in range(10):
             aBar = str(sort[c][1])
             new = int(aBar[24])
@@ -209,7 +209,7 @@ class data:
         fpData = []
         bdData = []
 
-        # load all images in dataset
+        # Load all images in dataset
         for subdir, dirs, files in os.walk(r'C:\Users\Faraaz\Documents\GitHub\ImageRetrievalBarcodeGenerator\MNIST_DS'):
             for filename in files:
                 filepath = subdir + os.sep + filename
@@ -217,15 +217,15 @@ class data:
                 if filepath.endswith(".jpg"):
                     print(filepath)
 
-        # set barcode to image
+        # Set barcode to image
         for f in range(len(fpData)):
             image = Image.open(fpData[f])
             imageArray = np.asarray(image)
             barcode = numpy_data
 
-        # list barcode per from zipfile
+        # List barcode per from zipfile
         barcode = list(zip(fpData, bdData))
 
-        # write and print barcodes in file
+        # Write and print barcodes in file
         with open('barcode.txt', 'w') as result:
             w = csv.writer(result, dialect='Notepad')
