@@ -66,23 +66,12 @@ array0 = np.sum(p, 1)
 # numpy.sum to project angle 45
 array45 = np.sum(p, 0)
 
-print("Array Projection 2 = ")
-print(array0)
-print('\n')
-print(array45)
-print('\n')
-
 joinedarray1 = array0 + array45
 print(joinedarray1)
 print('\n')
 
 # Calculate threshold value by dividing sum of array data by number of index in the array
 th2_p2 = sum(joinedarray1) / len(joinedarray1)
-
-print("Threshold value of P2 = ")
-print(th2_p2)
-print('\n')
-
 
 # Barcode generator algorithm for barcode 2
 for y in range(len(array2)):
@@ -91,8 +80,18 @@ for y in range(len(array2)):
     else:
         th2 = [*th2, 1]
 
+print("Array Projection 2 = ")
+print(array0)
+print('\n')
+print(array45)
+print('\n')
+
+print("Threshold value of P2 = ")
+print(th2_p2)
+print('\n')
+
 print("barcode 2 = ")
-print("th2")
+print(th2)
 print('\n')
 
 # Array data 3
@@ -128,9 +127,6 @@ print("\n")
 
 # Array data 4
 array4 = []
-print("Array Projection 4 = ")
-print(array4)
-print("\n")
 
 # Threshold data 4
 th4 = []
@@ -147,16 +143,20 @@ array4 = joinedarray2 + array45
 # Calculate threshold value by dividing sum of array data by number of index in the array
 th4_p4 = sum(array4) / len(array4)
 
-print("Threshold value of P4 = ")
-print(th4_p4)
-print("\n")
-
 # Barcode generator algorithm for barcode 4
 for w in range(len(array4)):
     if th4_p4 >= array4[w]:
         th4 = [*th4, 1]
     else:
         th4 = [*th4, 0]
+
+print("Array Projection 4 = ")
+print(array4)
+print("\n")
+
+print("Threshold value of P4 = ")
+print(th4_p4)
+print("\n")
 
 print("barcode 4 = ")
 print(th4)
