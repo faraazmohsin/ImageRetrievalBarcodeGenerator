@@ -1,3 +1,5 @@
+import csv
+
 import numpy
 import numpy as np
 from PIL import Image
@@ -161,3 +163,69 @@ print("\n")
 print("barcode 4 = ")
 print(th4)
 print("\n")
+
+
+# Search
+
+class data:
+
+    # calculate hamming distance
+    def h(self, u, y):
+        hamming = 0
+
+        for c in range(len(u)):
+
+            value1, value2 = int(u[c]), int(y[c])
+            if value1 != value2:
+                hamming += 1
+            else:
+                return
+
+    # define constructor for barcode
+    def __init__(self, start, barcode):
+        self.fileLocationHam
+        self.flocationHam
+        self.hm = []
+        self.start = start
+        self.barcode = barcode
+
+    # calculate total accuracy
+    def acc(self, sort):
+        fname = str(sort[0][1])
+        compute = int(fname[24])
+        counter = 0
+
+        # calculate accuracy from hamming distance
+        for c in range(10):
+            aBar = str(sort[c][1])
+            new = int(aBar[24])
+            if compute == aBar:
+                counter += 1
+
+            return (counter - 1) / 9
+
+    if __name__ == "__data__":
+
+        fpData = []
+        bdData = []
+
+        # load all images in dataset
+        for subdir, dirs, files in os.walk(r'C:\Users\Faraaz\Documents\GitHub\ImageRetrievalBarcodeGenerator\MNIST_DS'):
+            for filename in files:
+                filepath = subdir + os.sep + filename
+
+                if filepath.endswith(".jpg"):
+                    print(filepath)
+
+        # set barcode to image
+        for f in range(len(fpData)):
+            image = Image.open(fpData[f])
+            imageArray = np.asarray(image)
+            barcode = numpy_data
+
+        # list barcode per from zipfile
+        barcode = list(zip(fpData, bdData))
+
+        # write and print barcodes in file
+        with open('barcode.txt', 'w') as result:
+            w = csv.writer(result, dialect='Notepad')
